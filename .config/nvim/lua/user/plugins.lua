@@ -32,6 +32,15 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim" -- add better buffer tabs
   use "kyazdani42/nvim-web-devicons"
   use "moll/vim-bbye"
+  use {
+    'phaazon/hop.nvim', -- Easymotion-like
+    branch = 'v1', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      -- require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' } -- default config
+      require'hop'.setup { keys = 'fjdketovxqpygblzhcisuran' }
+    end
+  }
 
   -- Colorschemes
   use "lunarvim/colorschemes"

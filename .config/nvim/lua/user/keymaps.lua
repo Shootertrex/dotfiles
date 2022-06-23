@@ -19,6 +19,13 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Easy buffer navigation
 keymap("n", "<Tab>", ":bnext<CR>", opts)
 keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
+-- Hop navigation
+keymap("n", "<leader>w", ":HopWord<CR>", opts)
+keymap('', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", {})
+keymap('', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>", {})
+-- don't seem to work properly. works like 'f'
+-- vim.api.nvim_set_keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })<cr>", {})
+-- vim.api.nvim_set_keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>", {})
 
 
 -- Resize panes with arrows
@@ -31,6 +38,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<M-j>", ":Gitsigns next_hunk<CR>", opts)
 keymap("n", "<M-k>", ":Gitsigns prev_hunk<CR>", opts)
 keymap("n", "<M-d>", ":Gitsigns preview_hunk<CR>", opts)
+keymap("n", "<leader>g", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 
 -- Insert --
