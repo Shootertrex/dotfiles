@@ -38,7 +38,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<M-j>", ":Gitsigns next_hunk<CR>", opts)
 keymap("n", "<M-k>", ":Gitsigns prev_hunk<CR>", opts)
 keymap("n", "<M-d>", ":Gitsigns preview_hunk<CR>", opts)
-keymap("n", "<leader>g", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 
 -- Insert --
@@ -65,6 +64,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
-keymap("n", "<C-g>", "<cmd>Telescope live_grep<cr>", opts)
+-- keymap("n", "<C-g>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope buffers<cr>", opts)
+
+-- Nvimtree
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 

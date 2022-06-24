@@ -30,7 +30,8 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim" -- creates a floating, toggable terminal
   use "nvim-telescope/telescope.nvim" -- Telescope
   use "akinsho/bufferline.nvim" -- add better buffer tabs
-  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-web-devicons" -- provides file icons, etc.
+  use "kyazdani42/nvim-tree.lua" -- file browser
   use "moll/vim-bbye"
   use {
     'phaazon/hop.nvim', -- Easymotion-like
@@ -41,6 +42,16 @@ return packer.startup(function(use)
       require'hop'.setup { keys = 'fjdketovxqpygblzhcisuran' }
     end
   }
+  use {
+  "folke/which-key.nvim", -- popup menu for navigating hotkeys
+  config = function()
+    require("which-key").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
 
   -- Colorschemes
   use "lunarvim/colorschemes"
