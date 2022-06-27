@@ -166,6 +166,8 @@ local mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+    a = { "<cmd>2ToggleTerm size=80<cr>", "Terminal 2" },
+    b = { "<cmd>3ToggleTerm size=80<cr>", "Terminal 3" },
   },
 }
 

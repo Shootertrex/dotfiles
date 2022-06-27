@@ -29,6 +29,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "akinsho/toggleterm.nvim" -- creates a floating, toggable terminal
   use "nvim-telescope/telescope.nvim" -- Telescope
+  -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- makes Telescope search sort algorithm faster "apparently"
   use "akinsho/bufferline.nvim" -- add better buffer tabs
   use "kyazdani42/nvim-web-devicons" -- provides file icons, etc.
   use "kyazdani42/nvim-tree.lua" -- file browser

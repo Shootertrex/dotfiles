@@ -64,7 +64,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
--- keymap("n", "<C-g>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<C-g>", "<cmd>Telescope grep_string<cr>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope buffers<cr>", opts)
 
 -- Nvimtree
