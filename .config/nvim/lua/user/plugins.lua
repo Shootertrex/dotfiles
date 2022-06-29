@@ -34,6 +34,12 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons" -- provides file icons, etc.
   use "kyazdani42/nvim-tree.lua" -- file browser
   use "moll/vim-bbye"
+  -- use 'feline-nvim/feline.nvim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
   use {
     'phaazon/hop.nvim', -- Easymotion-like
     branch = 'v1', -- optional but strongly recommended
