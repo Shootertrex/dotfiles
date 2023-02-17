@@ -34,7 +34,13 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons" -- provides file icons, etc.
   use "kyazdani42/nvim-tree.lua" -- file browser
   use "moll/vim-bbye"
+  use "vlime/vlime"
+  -- use "kovisoft/slimv"
   -- use 'feline-nvim/feline.nvim'
+  use {
+    "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }  
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
