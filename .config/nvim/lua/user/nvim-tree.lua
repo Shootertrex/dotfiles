@@ -26,12 +26,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
 nvim_tree.setup {
   disable_netrw = true,
   hijack_netrw = true,
-  open_on_setup = false,
-  ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
-    "alpha",
-  },
+  --open_on_setup = false, -- these were removed on 2023-01-30. if issues arrise from below plugins, need to check docs
+  --ignore_ft_on_setup = {
+  --  "startify",
+  --  "dashboard",
+  --  "alpha",
+  --},
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
