@@ -1,8 +1,16 @@
-local status_ok, _ = pcall(require, "lspconfig")
+local status_ok, lsp = pcall(require, "lsp-zero")
 if not status_ok then
-  return
+	return
 end
 
-require "user.lsp.configs"
-require("user.lsp.handlers").setup()
--- require'lspconfig'.rust_analyzer.setup({})
+lsp.preset({
+  name = 'minimal',
+  set_lsp_keymaps = true,
+  manage_nvim_cmp = true,
+  suggest_lsp_servers = false,
+})
+
+-- (Optional) Configure lua language server for neovim
+lsp.nvim_workspace()
+
+lsp.setup()

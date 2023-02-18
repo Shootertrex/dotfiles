@@ -10,6 +10,11 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-------------------------------------
+-- there are more remaps in whichkey
+-- they are held there so there are hints next to them in the ribbon
+------------------------------------
+
 -- Normal --
 -- Easy window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -26,7 +31,15 @@ keymap('', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint
 -- don't seem to work properly. works like 'f'
 -- vim.api.nvim_set_keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })<cr>", {})
 -- vim.api.nvim_set_keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>", {})
+keymap("n", "J", "mzJ`z", opts) -- keeps cursor in place as moving new lines to current line
+-- clipboard
+-- keybinds to put something into system clipboard
+-- TODO: doesn't seem to work...
+keymap("n", "<leader>y", "\"+y", opts)
+keymap("v", "<leader>y", "\"+y", opts)
+keymap("n", "<leader>Y", "\"+Y", opts)
 
+keymap("n", "Q", "<nop>", opts)
 
 -- Resize panes with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -34,7 +47,7 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Git
+-- Git --
 keymap("n", "<M-j>", ":Gitsigns next_hunk<CR>", opts)
 keymap("n", "<M-k>", ":Gitsigns prev_hunk<CR>", opts)
 keymap("n", "<M-d>", ":Gitsigns preview_hunk<CR>", opts)
@@ -44,7 +57,7 @@ keymap("n", "<M-d>", ":Gitsigns preview_hunk<CR>", opts)
 -- Press jj to return to normal mode
 keymap("i", "jj", "<ESC>", opts)
 
--- Visual
+-- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -61,13 +74,10 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Telescope
+-- Telescope --
+-- see whichkey for the mappings
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
-keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 
--- Nvimtree
+-- Nvimtree --
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 

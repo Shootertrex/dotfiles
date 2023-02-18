@@ -83,9 +83,18 @@ local mappings = {
   -- ["w"] = { "<cmd>w!<CR>", "Save" },
   -- ["q"] = { "<cmd>q<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-  ["f"] = { "<cmd>Telescope find_files<cr>", "Find files", },
-  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+  --["f"] = { "<cmd>Telescope find_files<cr>", "Find files", },
+  --["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Packer" },
+  ["x"] = { "<cmd>!chmod +x %<CR>", "chmod +x" },
+
+  f = {
+    name = "Find",
+    f = { "<cmd>Telescope find_files<cr>", "Find files" },
+    w = { "<cmd>Telescope live_grep<cr>", "Find words/grep" },
+    b = { "<cmd>Telescope buffers<cr>", "Find buffers" },
+    h = { "<cmd>Telescope help_tags<cr>", "Find help" },
+  },
 
   p = {
     name = "Packer",
