@@ -1,15 +1,3 @@
--- cmp breaks for an unknown reason if these config files aren't in ./user
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.cmp"
-require "user.lsp"
-require "user.telescope"
-require "user.toggleterm"
-require "user.treesitter"
-require "user.gitsigns"
-require "user.colorscheme"
-require "user.bufferline"
-require "user.nvim-tree"
-require "user.whichkey"
-require "user.lualine"
+require("options")
+require("keymaps")
+require("lazyConfig")

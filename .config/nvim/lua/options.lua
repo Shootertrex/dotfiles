@@ -1,4 +1,6 @@
-vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
+--vim.loader.enable()                           -- is supposed to make start time faster. not noticeable
+vim.opt.shortmess:append({ I = true })          -- removes the home scree. some plugins for some reason break it anyway, so just remove it so there is no flashing
+-- vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
 vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
 vim.opt.ignorecase = true                       -- ignore case in search patterns
 vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
