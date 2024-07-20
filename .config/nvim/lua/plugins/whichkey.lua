@@ -1,7 +1,14 @@
 return {
   "folke/which-key.nvim", -- popup menu for navigating hotkeys
+  version = "^2",
   event = "VeryLazy",
   config = function()
+    local Terminal = require('toggleterm.terminal').Terminal
+    local lazygit = Terminal:new({ cmd = "lazygit", count = 5, hidden = true })
+    function _LAZYGIT_TOGGLE()
+      lazygit:toggle()
+    end
+
     local mappings = {
       --["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
       -- ["w"] = { "<cmd>w!<CR>", "Save" },
@@ -88,8 +95,9 @@ return {
         f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
         h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
         v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-        a = { "<cmd>2ToggleTerm size=80<cr>", "Terminal 2" },
-        b = { "<cmd>3ToggleTerm size=80<cr>", "Terminal 3" },
+        a = { "<cmd>1ToggleTerm size=80<cr>", "Terminal 1" },
+        b = { "<cmd>2ToggleTerm size=80<cr>", "Terminal 2" },
+        c = { "<cmd>3ToggleTerm size=80<cr>", "Terminal 3" },
       },
     }
     local options = {
