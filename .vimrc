@@ -2,7 +2,7 @@ set mouse=a
 imap jj <Esc>
 
 set autoindent
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 syntax on
 
 " show existing tab with 4 spaces width
