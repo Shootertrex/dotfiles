@@ -19,10 +19,6 @@ return {
 
       f = {
         name = "Find",
-        q = { "<cmd>Telescope find_files<cr>", "Find files" },
-        -- F = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-        Q = { "<cmd>Telescope live_grep<cr>", "Find words/grep" },
-        -- b = { "<cmd>Telescope buffers<cr>", "Find buffers" },
       },
 
       g = {
@@ -39,22 +35,13 @@ return {
           "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
           "Undo Stage Hunk",
         },
-        -- b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-        -- c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-        -- o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-        -- S = { "<cmd>Telescope git_stash<cr>", "Stash" },
         d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff", },
       },
 
       l = {
         name = "LSP",
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-        -- w = {
-        --   "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-        --   "Workspace Diagnostics",
-        -- },
         d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go to Definition" },
-        -- D = { "<cmd>Telescope diagnostics<cr>", "Document Diagnostics", },
         f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
         i = { "<cmd>LspInfo<cr>", "Info" },
         I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
@@ -70,26 +57,13 @@ return {
         n = { "<cmd>lua require('lspconfig').markdown_oxide.setup({})<cr><cmd>LspStart markdown_oxide<cr>", "Start markdown LSP" },
         q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
         r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-        -- R = { "<cmd>Telescope lsp_references<cr>", "References" },
-        -- s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-        -- S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols", },
       },
       s = {
         name = "Search",
-        -- b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-        -- c = { "<cmd>Telescope commands<cr>", "Commands" },
-        -- C = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-        -- h = { "<cmd>Telescope help_tags<cr>", "Search Help" },
-        -- M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-        -- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-        -- R = { "<cmd>Telescope registers<cr>", "Registers" },
-        -- k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
       },
 
       t = {
         name = "Terminal",
-        -- n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-        -- u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
         t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
         p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
         f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
