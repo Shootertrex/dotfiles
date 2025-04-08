@@ -4,7 +4,7 @@ return {
     priority = 1000,
     lazy=false,
     config = function()
-      vim.cmd [[colorscheme codemonkey]]
+      vim.cmd [[colorscheme nightfox]]
       vim.cmd[[hi Comment guifg = Gray]]
       vim.cmd[[hi CursorLine guibg=#444444]]
       vim.cmd[[hi DiagnosticVirtualTextError guifg=#c94f6d guibg=#3c2c3c]]
