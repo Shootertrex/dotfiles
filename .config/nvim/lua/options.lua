@@ -31,3 +31,5 @@ vim.opt.wrap = false                             -- display lines as one long li
 vim.opt.scrolloff = 8                           -- always keep 8 lines on the screen as page is scrolled
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
+
+vim.o.winborder = 'rounded'                     -- set popup window border style
