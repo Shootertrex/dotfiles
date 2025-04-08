@@ -13,10 +13,12 @@ return {
     local wk = require("which-key")
     wk.add({
       { "<leader>c", "<cmd>Bdelete!<CR>", desc = "Close Buffer", icon = "" },
+      { "<leader>L", "<cmd>Lazy<CR>", desc = "Lazy", icon = "󰒲" },
+
       { "<leader>f", group = "Find...", icon = "󰍉" }, -- group
 
       { "<leader>g", group = "Git...", icon = "" }, -- group
-      { "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", group = "Git...", icon = "" },
+      -- { "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", group = "Git...", icon = "" },
       { "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", desc = "Next Hunk" },
       { "<leader>gj", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc = "Prev Hunk" },
       { "<leader>gl", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc = "Blame" },
