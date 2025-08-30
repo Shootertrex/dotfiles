@@ -23,7 +23,7 @@ return {
   },
   keys = {
     -- Top Pickers & Explorer
-    { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
+    { "<leader><leader>", function() Snacks.picker.buffers() end,                                 desc = "Find buffers" },
     -- find
     { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Config File" },
     { "<leader>ff", function() Snacks.picker.files() end,                                   desc = "Files" },
@@ -32,7 +32,6 @@ return {
     { "<leader>fr", function() Snacks.picker.recent() end,                                  desc = "Recent" },
     { "<leader>fw", function() Snacks.picker.grep() end,                                    desc = "By words/grep" },
     { "<leader>fW", function() Snacks.picker.grep_word() end,                               desc = "Visual selection or word", mode = { "n", "x" } },
-    { "<leader>ft", function() Snacks.picker.buffers() end,                                 desc = "Tabs" },
     { "<leader>fb", function() Snacks.picker.lines() end,                                   desc = "In Current Buffer" },
     { "<leader>fB", function() Snacks.picker.grep_buffers() end,                            desc = "In All Buffers" },
     -- git
