@@ -5,7 +5,6 @@ return {
   config = function()
     local wk = require("which-key")
     wk.add({
-      { "<leader>c", "<cmd>Bdelete!<CR>", desc = "Close Buffer", icon = "" },
       { "<leader>L", "<cmd>Lazy<CR>", desc = "Lazy", icon = "󰒲" },
 
       { "<leader>f", group = "Find...", icon = "󰍉" }, -- group

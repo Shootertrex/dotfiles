@@ -24,6 +24,8 @@ return {
   keys = {
     -- Top Pickers & Explorer
     { "<leader><leader>", function() Snacks.picker.buffers() end,                                 desc = "Find buffers" },
+    { "<leader>c", function() Snacks.bufdelete() end,                                 desc = "Delete Buffer" },
+    { "<leader>C", function() Snacks.bufdelete.all() end,                                 desc = "Delete All Buffers" },
     -- find
     { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Config File" },
     { "<leader>ff", function() Snacks.picker.files() end,                                   desc = "Files" },
