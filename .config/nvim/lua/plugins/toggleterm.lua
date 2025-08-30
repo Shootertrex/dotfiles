@@ -1,8 +1,16 @@
 return {
   'akinsho/toggleterm.nvim',
   version = "*",
-  event = "VeryLazy",
-  -- cmd = { 'ToggleTerm' },
+  cmd = { 'ToggleTerm' },
+  keys = {
+    { "<C-\\>" },
+    { "<leader>ta", "<cmd>1ToggleTerm size=80<cr>", desc = "Terminal 1" },
+    { "<leader>tb", "<cmd>2ToggleTerm size=80<cr>", desc = "Terminal 2" },
+    { "<leader>tc", "<cmd>3ToggleTerm size=80<cr>", desc = "Terminal 3" },
+    { "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "Float" },
+    { "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "Horizontal" },
+    { "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "Vertical" },
+  },
   opts = {
     size = 20,
     open_mapping = [[<C-\>]],
@@ -25,14 +33,4 @@ return {
       },
     },
   },
-  -- for some reason, this doesn't change anything...
-  -- init = function()
-  --   local opts = {noremap = true}
-  --   vim.api.nvim_buf_set_keymap(0, 't', '<ESC>', [[<C-\><C-n>]], opts)
-  --   vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
-  --   vim.api.nvim_buf_set_keymap(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
-  --   vim.api.nvim_buf_set_keymap(0, 't', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
-  --   vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
-  --   vim.api.nvim_buf_set_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
-  -- end,
 }

@@ -1,10 +1,3 @@
-local Terminal = require('toggleterm.terminal').Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", count = 5, hidden = true })
-
-function _LAZYGIT_TOGGLE()
-  lazygit:toggle()
-end
-
 return {
   "folke/which-key.nvim", -- popup menu for navigating hotkeys
   version = "^3",
@@ -18,9 +11,9 @@ return {
       { "<leader>f", group = "Find...", icon = "󰍉" }, -- group
 
       { "<leader>g", group = "Git...", icon = "" }, -- group
-      -- { "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", group = "Git...", icon = "" },
+      { "<leader>gg", icon = "" },
       { "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", desc = "Next Hunk" },
-      { "<leader>gj", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc = "Prev Hunk" },
+      { "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc = "Prev Hunk" },
       { "<leader>gl", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc = "Blame" },
       { "<leader>gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc = "Preview Hunk" },
       { "<leader>gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "Reset Hunk" },
@@ -43,14 +36,7 @@ return {
       { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename" },
 
       { "<leader>s", group = "Search...", icon = "󰍉" }, -- group
-
       { "<leader>t", group = "Terminal...", icon = "" }, -- group
-      { "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "Float" },
-      { "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "Horizontal" },
-      { "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "Vertical" },
-      { "<leader>ta", "<cmd>1ToggleTerm size=80<cr>", desc = "Terminal 1" },
-      { "<leader>tb", "<cmd>2ToggleTerm size=80<cr>", desc = "Terminal 2" },
-      { "<leader>tc", "<cmd>3ToggleTerm size=80<cr>", desc = "Terminal 3" },
     })
   end,
 }
