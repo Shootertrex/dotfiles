@@ -64,7 +64,7 @@ return {
     { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
     { "<leader>sC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
     -- LSP
-    { "<leaderlRgr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
+    { "<leader>lR", function() Snacks.picker.lsp_references() end, desc = "References" },
     { "<leader>lp", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
     { "<leader>lP", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
     { "<leader>ls", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
